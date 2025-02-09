@@ -14,6 +14,11 @@ To read the serial output, instead of using the built-in USB, you can use a USB 
 
 With that in place, I could run `minicom` on my computer and see the mouse and keyboard reports from the Pico.
 
+# Build
+- `docker build -t pico-build .`
+- `docker run --rm -v "$(pwd):/mounted" pico-build`
+- You should now have a local `keyboard.uf2` for flashing.
+
 ![Photo of setup](./pico_keyboard.jpg)
 
 ## Code structure
